@@ -36,7 +36,7 @@ mongo_enable_remote   = "false"  # remote access enabled when true
 # Laravel's public directory is assumed "public"
 public_folder         = "/vagrant"
 
-nodejs_version        = "latest"   # By default "latest" will equal the latest stable version
+nodejs_version        = "v5.1.0"   # By default "latest" will equal the latest stable version
 nodejs_packages       = [          # List any global NodeJS packages that you want to install
   "express-generator",
   "forever",
