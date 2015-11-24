@@ -9,5 +9,13 @@
       }
     },
     "defaultFromEmail": ""
+  },
+  "oauth": {
+    "signingOrigins": [
+      {
+        "clientId": "super-site",
+        "origin": "http://localhost:4200"
+      }
+    ]
   }
 }
