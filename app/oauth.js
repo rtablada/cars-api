@@ -1,6 +1,5 @@
 var oauthserver = require('oauth2-server');
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 var OAuthAccessTokensModel = mongoose.model('OAuthAccessTokens');
 var OAuthRefreshTokensModel = mongoose.model('OAuthRefreshTokens');
