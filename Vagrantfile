@@ -38,9 +38,7 @@ public_folder         = "/vagrant"
 
 nodejs_version        = "v5.1.0"   # By default "latest" will equal the latest stable version
 nodejs_packages       = [          # List any global NodeJS packages that you want to install
-  "express-generator",
-  "forever",
-  "nodemon"
+  # "nodemon"
 ]
 
 Vagrant.configure("2") do |config|
