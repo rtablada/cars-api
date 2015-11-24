@@ -1,15 +1,15 @@
-var express = require('express'),
-    router = express.Router(),
-    adminRouter = express.Router(),
-    apiRouter = express.Router(),
+var express = require('express');
+var router = express.Router();
+var adminRouter = express.Router();
+var apiRouter = express.Router();
 
-    authFilter = require('./filters/auth'),
+var authFilter = require('./filters/auth');
 
-    adminHomeResource = require('./resources/admin/home'),
-    adminUserResource = require('./resources/admin/users'),
+var adminHomeResource = require('./resources/admin/home');
+var adminUserResource = require('./resources/admin/users');
 
-    sessionResource = require('./resources/session');
-    passwordResetResource = require('./resources/password-reset');
+var sessionResource = require('./resources/session');
+var passwordResetResource = require('./resources/password-reset');
 
 adminRouter.use(authFilter);
 adminRouter.use('/', adminHomeResource);
