@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
+var Schema = mongoose.Schema;
 
-var UserSchema = mongoose.Schema({
+var UserSchema = new Schema({
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
+  books: [{type: Schema.Types.ObjectId, ref: 'Book'}],
 });
 
 UserSchema.path('password').set(function(value) {

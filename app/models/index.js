@@ -1,6 +1,7 @@
 module.exports = {
   NewsArticle: require('./news-article'),
   User: require('./user'),
+  Book: require('./book'),
 
   oauth: {
     AccessTokens: require('./oauth/access-tokens'),
