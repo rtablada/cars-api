@@ -5,8 +5,9 @@ var favicon = require('serve-favicon');
 var app = express();
 
 require('./bootstrap/middleware')(app);
-require('./bootstrap/session')(app);
-require('./bootstrap/mail')(app);
+// Session and mail aren't needed. If you want it THERE BE DRAGONS
+// require('./bootstrap/session')(app);
+// require('./bootstrap/mail')(app);
 require('./bootstrap/mongo');
 require('./app/models');
 require('./bootstrap/passport')(app);

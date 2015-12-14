@@ -33,6 +33,7 @@ var model = {
   },
 
   saveAccessToken(token, clientId, expires, userId, callback) {
+    userId = userId.id || userId;
     console.log('in saveAccessToken (token: ' + token + ', clientId: ' + clientId + ', userId: ' + userId + ', expires: ' + expires + ')');
 
     var accessToken = new OAuthAccessTokensModel({
@@ -53,6 +54,10 @@ var model = {
         return callback(err);
       }
 
+      if (!user) {
+        return callback('Password does not match');
+      }
+
       user.checkPassword(password, function() {
         return callback(null, user._id);
       },
@@ -64,6 +69,7 @@ var model = {
   },
 
   saveRefreshToken(token, clientId, expires, userId, callback) {
+    userId = userId.id || userId;
     console.log(`in saveRefreshToken (token: ${token}, clientId: ${clientId}, userId: ${userId}, expires: ${expires})`);
 
     var refreshToken = new OAuthRefreshTokensModel({
