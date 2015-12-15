@@ -1,7 +1,7 @@
 module.exports = {
-  NewsArticle: require('./news-article'),
   User: require('./user'),
-  Book: require('./book'),
+  Car: require('./car'),
+  InventoryGroup: require('./inventory-group'),
 
   oauth: {
     AccessTokens: require('./oauth/access-tokens'),

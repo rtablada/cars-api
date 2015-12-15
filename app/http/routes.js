@@ -9,10 +9,11 @@ var register = require('./resources/register');
 
 apiRouter.use('/register', register);
 
-var books = require('./resources/books');
+var cars = require('./resources/cars');
 
-apiRouter.use('/books', books);
+apiRouter.use('/cars', cars);
+apiRouter.use('/inventoryGroups', require('./resources/inventory-group'));
 
-router.use('/api', oauth.authorise(), apiRouter);
+router.use('/api', apiRouter);
 
 module.exports = router;
