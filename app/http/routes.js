@@ -13,6 +13,7 @@ var cars = require('./resources/cars');
 
 apiRouter.use('/cars', cars);
 apiRouter.use('/inventoryGroups', require('./resources/inventory-group'));
+apiRouter.use('/inventoryHistories', require('./resources/inventory-history'));
 
 router.use('/api', apiRouter);
 

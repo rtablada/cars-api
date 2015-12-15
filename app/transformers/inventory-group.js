@@ -7,6 +7,7 @@ var InventoryGroupTransformer = Mystique.Transformer.extend({
       id: inventory.id,
       totalAvailability: inventory.totalAvailability,
       car: inventory.car,
+      inventoryHistory: inventory.inventoryHistory,
     };
   },
 
